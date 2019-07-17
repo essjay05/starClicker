@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik+Mono+One|Teko&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img class="superMario" src="https://fontmeme.com/permalink/190711/fc6e7a0e1d06b02092cff3ea376c4e18.png">
+      <img class="starClicker" src="https://fontmeme.com/permalink/190711/dcd62a718369d59682c4c6e05f1bf09b.png">
+      <p>Click on the star to increase star count:</p>
+    </header>
+    <main>
+      <section class="game">
+        <img id="star" src="star.png" onclick="generateStar()">
+        <div class="scoreBoard">
+          <h2 class="numOf">Number of Stars Generated:</h2>
+          <h1 id="starCount">0</h1>
+        </div>
+      </section>
+      <section class="upgrades">
+        <div class="upgrade">
+          <h4 class="upgradeName">Mushroom Multiplier</h4>
+          <h4 class="cost">30 stars</h4>
+          <img class="upgradeImg" id="mushroom" onClick="addMushroom()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAADLCAMAAAB04a46AAAArlBMVEX29vb+/v4AAADUAAD///+VlZXMAAD6+vrb29tzc3P03t7PAAB5eXm7AADk5OTTAAC/v7/ADAyhoaFHR0fSU1Pdp6fGAADu7u4lBAT24uFRCgvw1NR/f380NDRVVVXHx8fkvb0rBASKioo9PT2rq6vafHzDw8N1BwfHCwrFQ0Lnt7YTAwO3t7dNAABGAABDQ0PrtrVmZmaVhIQbGxtpXV7WdXXTSknYbWy6SUm/MjLD3bTXAAAE0UlEQVR4nO3d61baQBQF4KSJBAgwWFrjpYr3Wkntzdr2/V+s1krOQXcYQu6w90/XZM58DF2dDLMSx2EYhmEYhmGYbU3g5k5Qt2GdBHFvkDO9uI1y9/xN7py7dSvWCOGEE0444YQT3go4XJz6RcB9uJKt2ztP8BZmB+b7R5jvuDXuuSkLWRdPV+yj9DseSKcPG8e456ZMeQr8En1P/f4egu/1YeNLwgknvAEhnHDCNxEeJPGrhvtSu3p3NL6eZ3p3OM/dfW+eb9P88Om3pLt7VWSalB5HVbuDkZqBXc8znnmMF+qlJ6Bkg7t6qRs+VfhXZFeVHlU95y/hzwmP8P3UmnB13VGYNCa8AXCzrfCtnXHCCSd8M+CyVswE1wuRNLhl4ZMKr2T1Go2SdGdnSWxw3zlIcorhp9LCgV1ouFSedWVEJa5eg7F81LPQJBFACvx2rzNPCNiP6UhubXBPKoczGdG4vDnX8DODxp8Gh41xjB2uGp8RTjjhhBNOOOFrwOGoH+EoGeEoGO5VD98fSoSVMuNfs8C/2mbcqNL7lcOP1eb2UIa9N0SB6/O0WLsYqi394xrgcjc1TFeUkaG626sDnnwLa4AntQknnHDCCSec8OVcWTdeS5kfGi47hXhtajoZArswqgsN/yEjupalbiEfQfD2+OI5xwO1vyxlfNkaPniA8F8HGfILyc2DauFKabW7PJBxFnLM192RD7WHt/3VX9/B6bqCN1wpuYJT/s5auifj3CnieNAi3F2eVLjlOt3FlXkpN09w1QRetwFw0MMCHF+3kXCPcMIJJ5zwmuGhLDJ/ZoH/lOvCNsLN1WkS28mYhS6O5Do1+e2Bh+/xItMul7wP2wnPwoW9EU444YQTTjjhhBNOOOGEE0444YQTTjiGb+eem9plvc22y3rb7l1Wz4S599XVTwstgquPYLt+SckBB/Q2wc22wvlVJ5xwwlsDt8V+shGPeunJxv8H/GwpE35/0F+e1LOs0gIfS1QN4FlW78Fa+r5E+Gd1vCPD0WN9evkPgvv+H90FPMVrqxx+LhF+CFmvv5dL8gl+2f1PuTp9ymHNcEvWg9ti2gCH/8Zzwj3CCSec8A2Aw//dGg+HaeWMm5vdlTP8jeG/h6v3cWPgnFcPv1GP2Kois5uGzDjhhBNOOOGEE0540+Dn0uHdv0ehvoypHv56EI+5kxbFvCBOHo8QxbN9FDWoaQTiqLdffHFgiy/S4hK2mKoicBCzOCr6obzJQ8Rc9VSQlHThLYi6boJvUibSYgwbdK2lx25pj2EOVoGju+0FOLwfX4CjBivAq3kODOGEE0444YQT3i64M5om0S+Rlb9O8ZsfCoA7qogqHctfR+W5014XopeWkJUfvnBKRpWu6HUh6hPQcPy4rWLhqq1+h2K9b8YhnHDCCSec8G2Aq2XeBYZfSIt4g+CjyySY5cfSYrQ5cNe2pl2lRSvhhYZwwgknnHDCCS8SnmH1sT43bc+tYrgTDT7MM4glUUlyP1JFVOkS38ubFjUoNQNwX70IuN5XVzWqd+uPoGp4vVwJ4YQTTjjhhG8cvKQ0Ej45mWcy7paUsSrSFLhevaofBorNpCnrVBz3pCz4SRO5EsIJJ5xwwgknnPDWwZ3X91VFpW4ZwzAMwzAMw1SbvzdweLQlVLR8AAAAAElFTkSuQmCC">
+          <h3 class="numOf">Number of:</h3>
+          <h4 class="count" id="mushCt">0</h4>
+        </div>
+        <div class="upgrade">
+          <h4 class="upgradeName">1up Mushroom Multiplier</h4>
+          <h4 class="cost">120 stars</h4>
+          <img class="upgradeImg" id="greenMushroom" onClick="add1UpMushroom()" src="data:image/png;base64,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">
+          <h3 class="numOf">Number of:</h3>
+          <h4 class="count" id="mushCt">0</h4>
+        </div>
+        
+      </section>
+    </main>
+  </body>
+</html>
