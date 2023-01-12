@@ -74,6 +74,11 @@ h6, .title-style-6 {
 p {
   font-size: .95rem;
 }
+/* .upgrades-wrapper {
+  border-radius: .5rem;
+  border: 5px dashed white;
+  padding: 2rem;
+} */
 .upgrades {
   display: flex;
   flex-direction: row;
@@ -96,7 +101,6 @@ p {
 }
 .cost {
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.95rem;
   line-height: 1.4;
 }
 .count {
@@ -105,8 +109,8 @@ p {
   margin: 0;
 }
 .upgradeImg {
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
 }
 
