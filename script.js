@@ -21,24 +21,23 @@ let score = 0;
 let multiplier = 1;
 let mushrooms = 0;
 let greenMushrooms = 0;
-// Select set scoreboard variable to starCount element
-let scoreboard = document.getElementById("starCount");
+
 
 
 // Function to add one per click
 function generateStar() {
   score+=1;
   // console.log(score);
-  // // Select set scoreboard variable to starCount element
-  // let scoreboard = document.getElementById("starCount");
+  // Select set scoreboard variable to starCount element
+  let scoreboard = document.getElementById("starCount");
   // Change score on html with each click
   scoreboard.innerHTML = score;
 }
 
 // Function to for upgrading with mushrooms
 function addMushroom() {
-  // // Select set scoreboard variable to starCount element
-  // let scoreboard = document.getElementById("starCount");
+  // Select set scoreboard variable to starCount element
+  let scoreboard = document.getElementById("starCount");
 
   if ( score >= 30 ) {
     score -= 30;
