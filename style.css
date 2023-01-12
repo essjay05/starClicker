@@ -30,6 +30,11 @@ header, .game {
   justify-content: space-between;
   align-items: center;
 } */
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .countContainer {
   margin: 1.5rem auto;
   padding: 1.25rem 2rem;
@@ -74,17 +79,17 @@ h6, .title-style-6 {
 p {
   font-size: .95rem;
 }
-/* .upgrades-wrapper {
+.upgrades-wrapper {
   border-radius: .5rem;
   border: 5px dashed white;
-  padding: 2rem;
-} */
+  padding: 2rem 0;
+  margin-bottom: 5rem;
+}
 .upgrades {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 2rem;
-  padding-bottom: 5rem;
 }
 .upgrade {
   display: flex;
@@ -112,6 +117,13 @@ p {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 550px) {
