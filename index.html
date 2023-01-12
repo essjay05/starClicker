@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
     <script src="script.js"></script>
+    <title>Super Star Clicker</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Rubik+Mono+One|Teko&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img class="superMario" src="https://fontmeme.com/permalink/190711/fc6e7a0e1d06b02092cff3ea376c4e18.png">
-      <img class="starClicker" src="https://fontmeme.com/permalink/190711/dcd62a718369d59682c4c6e05f1bf09b.png">
+      <img class="starClicker" alt="Star Clicker" src="https://fontmeme.com/permalink/190711/dcd62a718369d59682c4c6e05f1bf09b.png">
       <p>Click on the star to increase star count:</p>
     </header>
     <main>
       <section class="game">
-        <img id="star" src="./assets/mario-star-clone.png" onclick="generateStar()">
+        <img id="star" src="./assets/mario-star-clone.png" alt="16 bit Mario Star" onclick="generateStar()">
         <div class="scoreBoard">
-          <h2 class="numOf">Number of Stars Generated:</h2>
-          <h1 id="starCount">0</h1>
+          <h1 class="numOf title-style-2">Number of Stars Generated:</h1>
+          <div class="countContainer">
+            <p id="starCount" class="title-style-1">0</p>
+          </div>
         </div>
       </section>
       <section class="upgrades">
         <div class="upgrade">
-          <h4 class="upgradeName">Mushroom Multiplier</h4>
-          <h4 class="cost">30 stars</h4>
-          <img class="upgradeImg" id="mushroom" onClick="addMushroom()" src="./assets/RedMushroom.png">
+          <h2 class="upgradeName">Mushroom<br/>Multiplier</h2>
+          <p class="cost title-style-3">30 stars</p>
+          <img class="upgradeImg" id="mushroom" alt="16 bit Mario Red Mushroom" onClick="addMushroom()" src="./assets/RedMushroom.png">
           <h3 class="numOf">Number of:</h3>
-          <h4 class="count" id="mushCt">0</h4>
+          <div class="countContainer">
+            <h4 class="count" id="mushCt">0</h4>
+          </div>
         </div>
         <div class="upgrade">
-          <h4 class="upgradeName">1up Mushroom Multiplier</h4>
-          <h4 class="cost">120 stars</h4>
-          <img class="upgradeImg" id="greenMushroom" onClick="add1UpMushroom()" src="./assets/GreenMushroom.png">
+          <h2 class="upgradeName"><span className="title-style-2">1up</span> Mushroom Multiplier</h2>
+          <p class="cost title-style-3">120 stars</p>
+          <img class="upgradeImg" id="greenMushroom" alt="16 bit Mario 1UP Green Mushroom" onClick="add1UpMushroom()" src="./assets/GreenMushroom.png">
           <h3 class="numOf">Number of:</h3>
-          <h4 class="count" id="mushCt">0</h4>
+          <div class="countContainer">
+            <h4 class="count" id="mushCt">0</h4>
+          </div>
         </div>
-        
       </section>
     </main>
   </body>

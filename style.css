@@ -3,79 +3,94 @@
 /*font-family: 'Press Start 2P', cursive;*/
 
 body {
-    margin: 0;
-    padding: 0;
-    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPaTamlHOcXQO73lJDv2jno9rfD5yn8AQd7dQeQiS_HRy3yQR");
-    /*object-fit: fill;  */
-  }
-  .superMario {
-    width: 35rem;
-    margin: 1rem;
-  }
-  .starClicker {
-    width: 30rem;
-  }
-  
-  header, .game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem;
-  }
-  #star {
-    width: 20rem;
-  }
-  .scoreBoard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header p {
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-  }
-  #starCount {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-  }
-  h1, h2, h3, h4, h5, p{
-    margin: 1rem;
-    color: white;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+  background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPaTamlHOcXQO73lJDv2jno9rfD5yn8AQd7dQeQiS_HRy3yQR");
+  background-size: fill; 
+}
+.superMario {
+  width: 35rem;
+  margin: 1rem;
+}
+.starClicker {
+  width: 30rem;
+}
+header, .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+}
+#star {
+  width: 20rem;
+}
+/* .scoreBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} */
+.countContainer {
+  margin: 1.5rem auto;
+  padding: 1.25rem 2rem;
+  border: 5px dotted yellow;
+  min-width: 50%;
+}
+header p {
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+}
+#starCount {
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.75rem;
+}
+h1, h2, h3, h4, h5, p{
+  margin: 1rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.upgrades {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
+.upgrade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 3rem 1.5rem;
+}
+.numOf, .upgradeName {
+  font-family: 'Rubik Mono One', sans-serif;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+.cost {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.count {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.75rem;
+  margin: 0;
+}
+.upgradeImg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 550px) {
   .upgrades {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  .upgrade {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 10rem;
-    margin: 0 3rem;
   }
-  .numOf, .upgradeName {
-    font-family: 'Rubik Mono One', sans-serif;
-    margin: 0.5rem;
-    font-size: .75rem;
-  }
-  .cost {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.5rem;
-    line-height: 1.4;
-  }
-  .count {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.25rem;
-    margin: 0;
-  }
-  .upgradeImg {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-  }
+}
   
