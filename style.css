@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, p{
   color: white;
   text-align: center;
   letter-spacing: 2px;
+  font-family: 'Press Start 2P', monospace;
 }
 h1, .title-style-1 {
   font-size: 2rem;
@@ -65,15 +66,12 @@ h4, .title-style-4 {
 }
 h5, .title-style-5 {
   font-size: 1.25rem;
-  font-family: 'Press Start 2P', monospace;
 }
 h6, .title-style-6 {
   font-size: 1.05rem;
-  font-family: 'Press Start 2P', monospace;
 }
 p {
   font-size: .95rem;
-  font-family: 'Press Start 2P', monospace;
 }
 .upgrades {
   display: flex;
